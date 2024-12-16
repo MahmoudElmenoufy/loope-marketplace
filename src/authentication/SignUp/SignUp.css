@@ -1,0 +1,36 @@
+/* set color black for label in all input fields */
+.css-113d811-MuiFormLabel-root-MuiInputLabel-root.Mui-focused {
+  color: rgba(0, 0, 0, 0.5) !important;
+}
+
+/* set border color black for border in input fields */
+.css-quhxjy-MuiInputBase-root-MuiOutlinedInput-root.Mui-focused
+  .MuiOutlinedInput-notchedOutline {
+  border-color: black !important;
+}
+
+/* Set margin for the input field */
+.css-xn6ruc > :not(style) {
+  margin: 0 0 12px !important;
+}
+
+/* Reset border color for the input date field */
+.css-jupps9-MuiInputBase-root-MuiOutlinedInput-root.Mui-focused
+  .MuiOutlinedInput-notchedOutline {
+  border-color: black !important;
+}
+
+/* Set width for input date field */
+.css-10o2lyd-MuiStack-root {
+  width: 100% !important;
+}
+
+.css-sc8y68-MuiInputBase-root-MuiOutlinedInput-root-MuiSelect-root.Mui-focused
+  .MuiOutlinedInput-notchedOutline {
+  border-color: black !important;
+}
+
+/* Reset padding for the input date field */
+.css-10o2lyd-MuiStack-root {
+  padding-top: 0 !important;
+}

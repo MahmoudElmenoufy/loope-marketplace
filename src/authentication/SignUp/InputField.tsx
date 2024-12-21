@@ -1,11 +1,14 @@
 import TextField from "@mui/material/TextField";
-
 export default function InputField({
   name,
   type = "text",
+  value,
+  handleChange,
 }: {
   name: string;
   type?: string;
+  value: string;
+  handleChange: (event: React.ChangeEvent<HTMLInputElement>) => void;
 }) {
   return (
     <div className="!w-full flex">
@@ -13,8 +16,10 @@ export default function InputField({
         {name}
       </label>
       <TextField
-        id="outlined-basic"
+        id={name}
         label={name}
+        value={value}
+        onChange={handleChange}
         variant="outlined"
         className="!w-4/6 bg-white"
         type={type}

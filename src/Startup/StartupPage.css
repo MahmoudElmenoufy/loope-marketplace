@@ -1,0 +1,26 @@
+:root{
+    background-color: #18403C;   
+}
+header{
+    position: absolute;
+    display: flex;
+    width: 20%;
+    top: 30%;
+    left: 41.5%;
+    color: #FFFFFF;
+    flex-direction: column;
+}
+
+header p{
+    margin-top: 50px;
+    letter-spacing: 3.9px;
+}
+
+section{
+    display: flex;
+    flex-direction: column;
+    margin-left: 45%;
+    gap: 10px;
+    position: absolute;
+    bottom: 5vh;
+}

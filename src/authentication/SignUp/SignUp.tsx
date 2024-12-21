@@ -25,7 +25,7 @@ function SignUp() {
   };
 
   return (
-    <div className="bg-[#FDF8F5] sm:w-10/12 sm:h-5/6 p-4 box-border rounded-lg grid grid-cols-2 overflow-auto">
+    <div className="bg-[#FDF8F5] sm:w-10/12 m-auto sm:h-5/6 p-4 box-border rounded-lg grid grid-cols-2 overflow-auto">
       <div className="px-4">
         <h2 className="mx-auto w-max mb-4 font-medium text-2xl text-[#18403C]">
           Register
@@ -84,8 +84,8 @@ function SignUp() {
             />
           </div>
           <InputField name="Email" type="Email" />
-          <InputField name="New Password" type="password" />
-          <InputField name="Repeat Password" type="password" />
+          <InputField name="Password" type="password" />
+          <InputField name="Confirm Password" type="password" />
           {/* <div className="!w-full flex">
             <label className="!w-1/4 flex items-center text-lg text-[#18403C]">
               Email

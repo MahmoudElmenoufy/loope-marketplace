@@ -1,10 +1,18 @@
+import {BrowserRouter,Routes,Route} from "react-router-dom";
+import StartupPage from "./Startup/StartupPage";
 import SignUp from "./authentication/SignUp/SignUp";
+import HomePage from "./HomePage/HomePage";
 
 function App() {
   return (
-    <div className="bg-[#18403C] flex justify-center items-center h-screen">
-      <SignUp />
-    </div>
+    
+    <BrowserRouter>
+    <Routes>
+      <Route path="/" element={<StartupPage />} />
+      <Route path="/signup" element={<SignUp />} />  
+      <Route path="/home" element={<HomePage />} />  
+    </Routes>
+   </BrowserRouter>
   );
 }
 

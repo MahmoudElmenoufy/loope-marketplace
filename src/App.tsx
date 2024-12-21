@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import {BrowserRouter,Routes,Route} from "react-router-dom";
 import StartupPage from "./Startup/StartupPage";
 import SignUp from "./authentication/SignUp/SignUp";
@@ -13,6 +14,19 @@ function App() {
       <Route path="/home" element={<HomePage />} />  
     </Routes>
    </BrowserRouter>
+=======
+// import SignUp from "./authentication/SignUp/SignUp";
+import Home from "./home/home";
+
+function App() {
+  return (
+    // <div className="bg-[#18403C] flex justify-center items-center h-screen">
+    //   <SignUp />
+    // </div>
+    <div className="min-h-screen">
+      <Home />
+    </div>
+>>>>>>> 3496c521b529b1d30d852e5e7f035ed66b295768
   );
 }
 

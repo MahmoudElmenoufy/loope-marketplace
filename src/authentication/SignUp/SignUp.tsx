@@ -1,5 +1,5 @@
 import * as React from "react";
-import Box from "@mui/material/Box";
+
 import { DemoContainer } from "@mui/x-date-pickers/internals/demo";
 import { AdapterDayjs } from "@mui/x-date-pickers/AdapterDayjs";
 import { LocalizationProvider } from "@mui/x-date-pickers/LocalizationProvider";
@@ -11,7 +11,11 @@ import FormControl from "@mui/material/FormControl";
 import Select, { SelectChangeEvent } from "@mui/material/Select";
 import InputField from "./InputField";
 import { Dayjs } from "dayjs";
+import FormGroup from "@mui/material/FormGroup";
+import FormControlLabel from "@mui/material/FormControlLabel";
+import Checkbox from "@mui/material/Checkbox";
 import "./SignUp.css";
+import InputPassword from "./InputPassword";
 
 function SignUp() {
   const [firstName, setFirstName] = React.useState("");
@@ -71,18 +75,13 @@ function SignUp() {
   };
 
   return (
-    <div className="bg-[#FDF8F5] sm:w-10/12 m-auto sm:h-5/6 p-4 box-border rounded-lg grid grid-cols-2 overflow-auto">
-      <div className="px-4">
-        <h2 className="mx-auto w-max mb-4 font-medium text-2xl text-[#18403C]">
-          Register
-        </h2>
-        <Box
-          component="form"
-          sx={{ "& > :not(style)": { m: 1, width: "25ch" } }}
-          noValidate
-          autoComplete="off"
-          // className="grid grid-cols-1"
-        >
+    <div className="bg-[#18403C] flex justify-center items-center h-screen">
+      <div className="bg-[#FDF8F5] sm:w-10/12 sm:h-5/6 p-4 box-border rounded-lg grid grid-cols-2 overflow-auto">
+        <div className="px-4">
+          <h2 className="mx-auto w-max mb-4 font-medium text-2xl text-[#18403C]">
+            Register
+          </h2>
+
           <InputField
             name="First Name"
             value={firstName}
@@ -100,7 +99,7 @@ function SignUp() {
           />
           <LocalizationProvider dateAdapter={AdapterDayjs}>
             <DemoContainer components={["DatePicker"]}>
-              <div className="!w-full flex">
+              <div className="!w-full flex !mb-3">
                 <label className="!w-1/4 flex items-center text-lg text-[#18403C]">
                   Birthdate
                 </label>
@@ -113,7 +112,7 @@ function SignUp() {
               </div>
             </DemoContainer>
           </LocalizationProvider>
-          <div className="!w-full flex">
+          <div className="!w-full flex !mb-3">
             <label className="!w-1/4 flex items-center text-lg text-[#18403C]">
               Gender
             </label>
@@ -133,7 +132,7 @@ function SignUp() {
               </FormControl>
             </div>
           </div>
-          <div className="!w-full flex">
+          <div className="!w-full flex !mb-3">
             <label className="!w-1/4 flex items-center text-lg text-[#18403C]">
               Phone Number
             </label>
@@ -143,74 +142,44 @@ function SignUp() {
               className="!w-4/6 bg-white"
             />
           </div>
-<<<<<<< HEAD
-          <InputField name="Email" type="Email" />
-          <InputField name="Password" type="password" />
-          <InputField name="Confirm Password" type="password" />
-          {/* <div className="!w-full flex">
-            <label className="!w-1/4 flex items-center text-lg text-[#18403C]">
-              Email
-            </label>
-            <TextField
-              id="outlined-basic"
-              label="Email"
-              variant="outlined"
-              className="!w-4/6 bg-white"
-              type="email"
-            />
-          </div>
-          <div className="!w-full flex">
-            <label className="!w-1/4 flex items-center text-lg text-[#18403C]">
-              New Password
-            </label>
-            <TextField
-              id="outlined-basic"
-              label="New Password"
-              variant="outlined"
-              className="!w-4/6 bg-white"
-              type="password"
-            />
-          </div>
-          <div className="!w-full flex">
-            <label className="!w-1/4 flex items-center text-lg text-[#18403C]">
-              Repeat Password
-            </label>
-            <TextField
-              id="outlined-basic"
-              label="Repeat Password"
-              variant="outlined"
-              className="!w-4/6 bg-white"
-              type="password"
-            />
-          </div> */}
-=======
           <InputField
             name="Email"
             type="Email"
             value={email}
             handleChange={handleChangeEmail}
           />
-          <InputField
-            name="New Password"
-            type="password"
-            value={newPassword}
-            handleChange={handleChangeNewPassword}
+          <div className="!w-full flex !mb-3">
+            <label className="!w-1/4 flex items-center text-lg text-[#18403C]">
+              New Password
+            </label>
+            <InputPassword label="New Password" />
+          </div>
+          <div className="!w-full flex !mb-3">
+            <label className="!w-1/4 flex items-center text-lg text-[#18403C]">
+              Repeat Password
+            </label>
+            <InputPassword label="Repeat Password" />
+          </div>
+          <FormGroup className="!w-full">
+            <FormControlLabel
+              required
+              control={<Checkbox />}
+              label="I understand and agree to all terms of use and privacy policy."
+            />
+          </FormGroup>
+          <div className="!w-full flex justify-center">
+            <button className="bg-[#18403C] !w-1/2 text-[#C3E6C3] p-2 rounded-l-full rounded-r-full">
+              Register
+            </button>
+          </div>
+        </div>
+        <div className="flex justify-center items-center">
+          <img
+            src="loope-marketplace.png"
+            alt="loope marketplace logo"
+            className="bg-[#18403C] p-4 rounded-lg"
           />
-          <InputField
-            name="Repeat Password"
-            type="password"
-            value={repeatPassword}
-            handleChange={handleChangeRepeatPassword}
-          />
->>>>>>> 3496c521b529b1d30d852e5e7f035ed66b295768
-        </Box>
-      </div>
-      <div className="flex justify-center items-center">
-        <img
-          src="loope-marketplace.png"
-          alt="loope marketplace logo"
-          className="bg-[#18403C] p-4 rounded-lg"
-        />
+        </div>
       </div>
     </div>
   );

@@ -5,13 +5,15 @@ import AddCircleIcon from "@mui/icons-material/AddCircle";
 import LocalMallIcon from "@mui/icons-material/LocalMall";
 import AccountCircleIcon from "@mui/icons-material/AccountCircle";
 import FilterAltIcon from "@mui/icons-material/FilterAlt";
+import IconButton from "@mui/material/IconButton";
+import Stack from "@mui/material/Stack";
 
 function HomePage() {
   return (
     <>
       <div className="px-6 py-2 bg-[#FDF8F5] flex justify-between items-center">
         <div className="flex items-center gap-x-5">
-          <img src="/public/loope_head.png" alt="Loope logo" />
+          <img src="loope.png" alt="Loope logo" />
         </div>
         <div>
           <input
@@ -23,26 +25,40 @@ function HomePage() {
         </div>
         <NotificationsIcon />
       </div>
-      <div className="flex justify-center">
-        <div className="fixed bottom-10 m-auto p-3 bg-[#18403C] rounded-full flex justify-center gap-x-20">
-          <HomeIcon fontSize="large" className="text-white cursor-pointer" />
-          <CategoryIcon
-            fontSize="large"
-            className="text-white cursor-pointer"
-          />
-          <AddCircleIcon
-            fontSize="large"
-            className="text-white cursor-pointer"
-          />
-          <LocalMallIcon
-            fontSize="large"
-            className="text-white cursor-pointer"
-          />
-          <AccountCircleIcon
-            fontSize="large"
-            className="text-white cursor-pointer"
-          />
-        </div>
+      <div className="flex justify-center ">
+        <Stack
+          direction="row"
+          spacing={1}
+          className="fixed bottom-10 m-auto p-3 bg-red-500  rounded-full flex justify-center gap-x-20"
+        >
+          <IconButton aria-label="delete">
+            <HomeIcon fontSize="large" className="text-white cursor-pointer" />
+          </IconButton>
+          <IconButton aria-label="delete">
+            <CategoryIcon
+              fontSize="large"
+              className="text-white cursor-pointer"
+            />
+          </IconButton>
+          <IconButton aria-label="delete">
+            <AddCircleIcon
+              fontSize="large"
+              className="text-white cursor-pointer"
+            />
+          </IconButton>
+          <IconButton aria-label="delete">
+            <LocalMallIcon
+              fontSize="large"
+              className="text-white cursor-pointer"
+            />
+          </IconButton>
+          <IconButton aria-label="delete">
+            <AccountCircleIcon
+              fontSize="large"
+              className="text-white cursor-pointer"
+            />
+          </IconButton>
+        </Stack>
       </div>
     </>
   );

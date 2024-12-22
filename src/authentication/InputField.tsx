@@ -3,6 +3,7 @@ import Box from "@mui/material/Box";
 
 export default function InputField({
   name,
+  placeholder,
   type = "text",
   value,
   handleChange,
@@ -10,6 +11,7 @@ export default function InputField({
   name: string;
   type?: string;
   value: string;
+  placeholder?: string;
   handleChange: (event: React.ChangeEvent<HTMLInputElement>) => void;
 }) {
   return (

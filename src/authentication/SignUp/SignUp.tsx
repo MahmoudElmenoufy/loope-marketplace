@@ -9,13 +9,14 @@ import MenuItem from "@mui/material/MenuItem";
 import { MuiTelInput } from "mui-tel-input";
 import FormControl from "@mui/material/FormControl";
 import Select, { SelectChangeEvent } from "@mui/material/Select";
-import InputField from "./InputField";
+import InputField from "../InputField";
 import { Dayjs } from "dayjs";
-import FormGroup from "@mui/material/FormGroup";
-import FormControlLabel from "@mui/material/FormControlLabel";
-import Checkbox from "@mui/material/Checkbox";
+// import FormGroup from "@mui/material/FormGroup";
+// import FormControlLabel from "@mui/material/FormControlLabel";
+// import Checkbox from "@mui/material/Checkbox";
 import "./SignUp.css";
-import InputPassword from "./InputPassword";
+// import InputPassword from "./InputPassword";
+import Box from "@mui/material/Box";
 
 function SignUp() {
   const [firstName, setFirstName] = React.useState("");
@@ -75,13 +76,18 @@ function SignUp() {
   };
 
   return (
-    <div className="bg-[#18403C] flex justify-center items-center h-screen">
-      <div className="bg-[#FDF8F5] sm:w-10/12 sm:h-5/6 p-4 box-border rounded-lg grid grid-cols-2 overflow-auto">
-        <div className="px-4">
-          <h2 className="mx-auto w-max mb-4 font-medium text-2xl text-[#18403C]">
-            Register
-          </h2>
-
+    <div className="bg-[#FDF8F5] m-auto sm:w-10/12 sm:h-5/6 p-4 box-border rounded-lg overflow-auto">
+      <div className="px-4">
+        <h2 className="mx-auto w-max mb-4 font-medium text-2xl text-[#18403C]">
+          REGISTER
+        </h2>
+        <Box
+          component="form"
+          sx={{ "& > :not(style)": { m: 1, width: "25ch" } }}
+          noValidate
+          autoComplete="off"
+          className="grid grid-cols-2"
+        >
           <InputField
             name="First Name"
             value={firstName}
@@ -143,43 +149,35 @@ function SignUp() {
             />
           </div>
           <InputField
+            name="New Password"
+            type="password"
+            value={newPassword}
+            handleChange={handleChangeNewPassword}
+          />
+          <InputField
+            name="Repeat Password"
+            type="password"
+            value={repeatPassword}
+            handleChange={handleChangeRepeatPassword}
+          />
+          <InputField
             name="Email"
             type="Email"
             value={email}
             handleChange={handleChangeEmail}
+            placeholder="example@site.com"
           />
-          <div className="!w-full flex !mb-3">
-            <label className="!w-1/4 flex items-center text-lg text-[#18403C]">
-              New Password
-            </label>
-            <InputPassword label="New Password" />
-          </div>
-          <div className="!w-full flex !mb-3">
-            <label className="!w-1/4 flex items-center text-lg text-[#18403C]">
-              Repeat Password
-            </label>
-            <InputPassword label="Repeat Password" />
-          </div>
-          <FormGroup className="!w-full">
-            <FormControlLabel
-              required
-              control={<Checkbox />}
-              label="I understand and agree to all terms of use and privacy policy."
-            />
-          </FormGroup>
-          <div className="!w-full flex justify-center">
-            <button className="bg-[#18403C] !w-1/2 text-[#C3E6C3] p-2 rounded-l-full rounded-r-full">
-              Register
-            </button>
-          </div>
-        </div>
-        <div className="flex justify-center items-center">
-          <img
-            src="loope-marketplace.png"
-            alt="loope marketplace logo"
-            className="bg-[#18403C] p-4 rounded-lg"
-          />
-        </div>
+          <button className="text-white w-full me-auto hover:bg-[#173331] justify-self-end row-start-6 col-start-2 font-medium rounded-3xl text-sm px-5 py-5 text-center me-2 focus:ring-4 mb-2 bg-[#18403C]">
+            SUBMIT
+          </button>
+        </Box>
+      </div>
+      <div className="flex justify-center items-center">
+        <img
+          src="/public/loope_head.png"
+          alt="loope marketplace logo"
+          className="w-48 h-24 p-4 rounded-lg"
+        />
       </div>
     </div>
   );

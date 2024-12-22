@@ -2,8 +2,8 @@ import { Link } from "react-router-dom"
 import "./StartupPage.css"
 function StartupPage() {
     return (
-        <div>
-            <div className="container">
+        
+        <div className="bg-[#18403C] flex justify-center items-center h-screen">
             <header>
             <img src="\public\CoverTitle.png" alt="Loope-Market Place" />
             <p>BUY BETTER - BUY PRELOVED</p>
@@ -19,8 +19,8 @@ function StartupPage() {
                 </span>
             </section>
             
-            </div>
         </div>
+       
     )
 }
 

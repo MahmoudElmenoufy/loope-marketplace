@@ -71,6 +71,7 @@ function SignUp() {
   };
 
   return (
+    <div className="bg-[#18403C] flex justify-center items-center h-screen">
     <div className="bg-[#FDF8F5] m-auto sm:w-10/12 sm:h-5/6 p-4 box-border rounded-lg overflow-auto">
       <div className="px-4">
         <h2 className="mx-auto w-max mb-4 font-medium text-2xl text-[#18403C]">
@@ -172,6 +173,7 @@ function SignUp() {
           className="w-48 h-24 p-4 rounded-lg"
         />
       </div>
+    </div>
     </div>
   );
 }

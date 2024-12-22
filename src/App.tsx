@@ -6,8 +6,8 @@ import SignIpPage from "./authentication/SignIn/SignInPage";
 
 function App() {
   return (
-    
-    <BrowserRouter>
+    <div>
+    <BrowserRouter >
     <Routes>
       <Route path="/" element={<StartupPage />} />
       <Route path="/signup" element={<SignUp />} />  
@@ -15,6 +15,7 @@ function App() {
       <Route path="/signin" element={<SignIpPage />} />  
     </Routes>
    </BrowserRouter>
+   </div>
   );
 }
 

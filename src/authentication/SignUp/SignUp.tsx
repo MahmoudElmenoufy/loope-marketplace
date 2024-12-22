@@ -114,26 +114,13 @@ function SignUp() {
               </div>
             </DemoContainer>
           </LocalizationProvider>
-          <div className="!w-full flex">
-            <label className="!w-1/4 flex items-center text-lg text-[#18403C]">
-              Gender
-            </label>
-            <div className="!w-4/6 bg-white">
-              <FormControl fullWidth>
-                <InputLabel id="demo-simple-select-label">Gender</InputLabel>
-                <Select
-                  labelId="demo-simple-select-label"
-                  id="demo-simple-select"
-                  value={gender}
-                  label="Gender"
-                  onChange={handleChangeGender}
-                >
-                  <MenuItem value={"male"}>male</MenuItem>
-                  <MenuItem value={"female"}>female</MenuItem>
-                </Select>
-              </FormControl>
-            </div>
-          </div>
+          <InputField
+            name="Email"
+            type="Email"
+            value={email}
+            handleChange={handleChangeEmail}
+            placeholder="example@site.com"
+          />
           <div className="!w-full flex">
             <label className="!w-1/4 flex items-center text-lg text-[#18403C]">
               Phone Number
@@ -156,13 +143,26 @@ function SignUp() {
             value={repeatPassword}
             handleChange={handleChangeRepeatPassword}
           />
-          <InputField
-            name="Email"
-            type="Email"
-            value={email}
-            handleChange={handleChangeEmail}
-            placeholder="example@site.com"
-          />
+          <div className="!w-full flex">
+            <label className="!w-1/4 flex items-center text-lg text-[#18403C]">
+              Gender
+            </label>
+            <div className="!w-4/6 bg-white">
+              <FormControl fullWidth>
+                <InputLabel id="demo-simple-select-label">Gender</InputLabel>
+                <Select
+                  labelId="demo-simple-select-label"
+                  id="demo-simple-select"
+                  value={gender}
+                  label="Gender"
+                  onChange={handleChangeGender}
+                >
+                  <MenuItem value={"male"}>male</MenuItem>
+                  <MenuItem value={"female"}>female</MenuItem>
+                </Select>
+              </FormControl>
+            </div>
+          </div>
           <button className="text-white w-full me-auto hover:bg-[#173331] justify-self-end row-start-6 col-start-2 font-medium rounded-3xl text-sm px-5 py-5 text-center me-2 focus:ring-4 mb-2 bg-[#18403C]">SUBMIT</button>
         </Box>
       </div>

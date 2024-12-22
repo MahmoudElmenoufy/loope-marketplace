@@ -1,6 +1,7 @@
 import TextField from "@mui/material/TextField";
 export default function InputField({
   name,
+  placeholder,
   type = "text",
   value,
   handleChange,
@@ -8,6 +9,7 @@ export default function InputField({
   name: string;
   type?: string;
   value: string;
+  placeholder?: string;
   handleChange: (event: React.ChangeEvent<HTMLInputElement>) => void;
 }) {
   return (
@@ -20,6 +22,7 @@ export default function InputField({
         label={name}
         value={value}
         onChange={handleChange}
+        placeholder={placeholder}
         variant="outlined"
         className="!w-4/6 bg-white"
         type={type}

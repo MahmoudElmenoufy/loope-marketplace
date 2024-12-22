@@ -9,7 +9,7 @@ import MenuItem from "@mui/material/MenuItem";
 import { MuiTelInput } from "mui-tel-input";
 import FormControl from "@mui/material/FormControl";
 import Select, { SelectChangeEvent } from "@mui/material/Select";
-import InputField from "./InputField";
+import InputField from "../InputField";
 import { Dayjs } from "dayjs";
 import "./SignUp.css";
 
@@ -71,17 +71,17 @@ function SignUp() {
   };
 
   return (
-    <div className="bg-[#FDF8F5] sm:w-10/12 m-auto sm:h-5/6 p-4 box-border rounded-lg grid grid-cols-2 overflow-auto">
+    <div className="bg-[#FDF8F5] m-auto sm:w-10/12 sm:h-5/6 p-4 box-border rounded-lg overflow-auto">
       <div className="px-4">
         <h2 className="mx-auto w-max mb-4 font-medium text-2xl text-[#18403C]">
-          Register
+          REGISTER
         </h2>
         <Box
           component="form"
           sx={{ "& > :not(style)": { m: 1, width: "25ch" } }}
           noValidate
           autoComplete="off"
-          // className="grid grid-cols-1"
+          className="grid grid-cols-2"
         >
           <InputField
             name="First Name"
@@ -143,53 +143,6 @@ function SignUp() {
               className="!w-4/6 bg-white"
             />
           </div>
-<<<<<<< HEAD
-          <InputField name="Email" type="Email" />
-          <InputField name="Password" type="password" />
-          <InputField name="Confirm Password" type="password" />
-          {/* <div className="!w-full flex">
-            <label className="!w-1/4 flex items-center text-lg text-[#18403C]">
-              Email
-            </label>
-            <TextField
-              id="outlined-basic"
-              label="Email"
-              variant="outlined"
-              className="!w-4/6 bg-white"
-              type="email"
-            />
-          </div>
-          <div className="!w-full flex">
-            <label className="!w-1/4 flex items-center text-lg text-[#18403C]">
-              New Password
-            </label>
-            <TextField
-              id="outlined-basic"
-              label="New Password"
-              variant="outlined"
-              className="!w-4/6 bg-white"
-              type="password"
-            />
-          </div>
-          <div className="!w-full flex">
-            <label className="!w-1/4 flex items-center text-lg text-[#18403C]">
-              Repeat Password
-            </label>
-            <TextField
-              id="outlined-basic"
-              label="Repeat Password"
-              variant="outlined"
-              className="!w-4/6 bg-white"
-              type="password"
-            />
-          </div> */}
-=======
-          <InputField
-            name="Email"
-            type="Email"
-            value={email}
-            handleChange={handleChangeEmail}
-          />
           <InputField
             name="New Password"
             type="password"
@@ -202,14 +155,21 @@ function SignUp() {
             value={repeatPassword}
             handleChange={handleChangeRepeatPassword}
           />
->>>>>>> 3496c521b529b1d30d852e5e7f035ed66b295768
+          <InputField
+            name="Email"
+            type="Email"
+            value={email}
+            handleChange={handleChangeEmail}
+            placeholder="example@site.com"
+          />
+          <button className="text-white w-full me-auto hover:bg-[#173331] justify-self-end row-start-6 col-start-2 font-medium rounded-3xl text-sm px-5 py-5 text-center me-2 focus:ring-4 mb-2 bg-[#18403C]">SUBMIT</button>
         </Box>
       </div>
       <div className="flex justify-center items-center">
         <img
-          src="loope-marketplace.png"
+          src="/public/loope_head.png"
           alt="loope marketplace logo"
-          className="bg-[#18403C] p-4 rounded-lg"
+          className="w-48 h-24 p-4 rounded-lg"
         />
       </div>
     </div>

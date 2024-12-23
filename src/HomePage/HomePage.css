@@ -1,6 +1,13 @@
-/* body {
+body {
   background-color: #fdf8f5;
-} */
+}
+
+.featured-sellers {
+  display: grid;
+  grid-template-columns: 74% 25%;
+  gap: 10px; /* Optional: Adds space between columns */
+}
+
 .nav-item a {
   color: #000;
   text-decoration: none;

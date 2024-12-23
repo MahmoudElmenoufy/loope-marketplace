@@ -46,88 +46,91 @@ function HomePage() {
 
   return (
     <>
-      <div className="px-6 py-2 bg-[#FDF8F5] flex justify-between items-center">
-        <div className="flex items-center gap-x-5">
-          <img src="loope.png" alt="Loope logo" />
-        </div>
-        <div>
-          <input
-            type="search"
-            placeholder="Search"
-            className="px-4 py-2 mr-8 rounded-lg"
-          />
-          <FilterAltIcon />
-        </div>
-        <NotificationsIcon />
-      </div>
-
-      <div className="featured-sellers grid-rows-1 mt-5">
-        <div>
-          <h1 className="text-3xl font-medium mb-5">Featured Sellers</h1>
-          <div className="flex gap-x-5 overflow-x-auto">
-            <FeaturedSellers imageSrc="robot.jpeg" imageAlt="robot" />
-            <FeaturedSellers imageSrc="robot.jpeg" imageAlt="robot" />
-            <FeaturedSellers imageSrc="robot.jpeg" imageAlt="robot" />
-            <FeaturedSellers imageSrc="robot.jpeg" imageAlt="robot" />
-            <FeaturedSellers imageSrc="robot.jpeg" imageAlt="robot" />
-            <FeaturedSellers imageSrc="robot.jpeg" imageAlt="robot" />
-            <FeaturedSellers imageSrc="robot.jpeg" imageAlt="robot" />
-            <FeaturedSellers imageSrc="robot.jpeg" imageAlt="robot" />
+      <div className="sticky justify-center">
+        <div className="w-sceen px-6 py-2 bg-[#FDF8F5] flex justify-between items-center">
+          <div className="flex items-center gap-x-5">
+            <img src="loope.png" alt="Loope logo" />
           </div>
+          <div className=" m-auto p-3 bg-[#18403C] rounded-full flex justify-center gap-20 w-1/2">
+            <HomeIcon fontSize="large" className="text-white cursor-pointer" />
+            <CategoryIcon
+              titleAccess="Category"
+              fontSize="large"
+              className="text-white cursor-pointer"
+              role="button"
+            />
+            <AddCircleIcon
+              titleAccess="Add Item"
+              fontSize="large"
+              className="text-white cursor-pointer"
+              role="button"
+            />
+            <LocalMallIcon
+              titleAccess="Shop"
+              fontSize="large"
+              className="text-white cursor-pointer"
+              role="button"
+            />
+            <AccountCircleIcon
+              titleAccess="Profile"
+              fontSize="large"
+              className="text-white cursor-pointer"
+              role="button"
+            />
+          </div>
+          <div className="mr-20">
+            <input
+              type="search"
+              placeholder="Search"
+              className="px-4 py-2 mr-6 rounded-full"
+            />
+            <FilterAltIcon
+              titleAccess="Filter"
+              fontSize="medium"
+              htmlColor="#18403C"
+              role="button"
+            />
+          </div>
+          <NotificationsIcon
+            titleAccess="Notifications"
+            fontSize="medium"
+            htmlColor="#18403C"
+            role="button"
+          />
         </div>
-        {/* <div className="slideshow-container flex justify-end !w-full">
+
+        <div className="featured-sellers grid-rows-1 mt-5">
+          <div>
+            <h1 className="text-3xl font-medium mb-5">Featured Sellers</h1>
+            <div className="flex gap-x-5 overflow-x-auto">
+              <FeaturedSellers imageSrc="robot.jpeg" imageAlt="robot" />
+              <FeaturedSellers imageSrc="robot.jpeg" imageAlt="robot" />
+              <FeaturedSellers imageSrc="robot.jpeg" imageAlt="robot" />
+              <FeaturedSellers imageSrc="robot.jpeg" imageAlt="robot" />
+              <FeaturedSellers imageSrc="robot.jpeg" imageAlt="robot" />
+              <FeaturedSellers imageSrc="robot.jpeg" imageAlt="robot" />
+              <FeaturedSellers imageSrc="robot.jpeg" imageAlt="robot" />
+              <FeaturedSellers imageSrc="robot.jpeg" imageAlt="robot" />
+            </div>
+          </div>
+          {/* <div className="slideshow-container flex justify-end !w-full">
           <img src="one.jpg" alt="" className="active rounded-xl" />
         </div> */}
-        <div className="!w-full relative overflow-hidden rounded-lg">
-          {images.map((image, index) => (
-            <img
-              key={image.src}
-              src={image.src}
-              alt={image.alt}
-              className={`
+          <div className="!w-full relative overflow-hidden rounded-lg">
+            {images.map((image, index) => (
+              <img
+                key={image.src}
+                src={image.src}
+                alt={image.alt}
+                className={`
             absolute top-0 left-0 w-full h-full object-cover
             transition-all duration-500 ease-in-out
             ${getSlideStyles(index)}
           `}
-            />
-          ))}
+              />
+            ))}
+          </div>
         </div>
-      </div>
-
-      <div className="flex justify-center ">
-        <Stack
-          direction="row"
-          spacing={1}
-          className="fixed bottom-10 m-auto p-3 bg-[#18403C]  rounded-full flex justify-center gap-x-20"
-        >
-          <IconButton aria-label="home">
-            <HomeIcon fontSize="large" className="text-white cursor-pointer" />
-          </IconButton>
-          <IconButton aria-label="category">
-            <CategoryIcon
-              fontSize="large"
-              className="text-white cursor-pointer"
-            />
-          </IconButton>
-          <IconButton aria-label="addItem">
-            <AddCircleIcon
-              fontSize="large"
-              className="text-white cursor-pointer"
-            />
-          </IconButton>
-          <IconButton aria-label="shop">
-            <LocalMallIcon
-              fontSize="large"
-              className="text-white cursor-pointer"
-            />
-          </IconButton>
-          <IconButton aria-label="profile">
-            <AccountCircleIcon
-              fontSize="large"
-              className="text-white cursor-pointer"
-            />
-          </IconButton>
-        </Stack>
       </div>
     </>
   );

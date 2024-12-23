@@ -10,6 +10,7 @@ import IconButton from "@mui/material/IconButton";
 import Stack from "@mui/material/Stack";
 import FeaturedSellers from "./FeaturedSellers/FeaturedSellers";
 import "./HomePage.css";
+import LatestListings from "./Latest Listings/LatestListings";
 
 function HomePage() {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -46,7 +47,7 @@ function HomePage() {
 
   return (
     <>
-      <div className="sticky justify-center">
+      <div className="sticky justify-center px-4">
         <div className="w-sceen px-6 py-2 bg-[#FDF8F5] flex justify-between items-center">
           <div className="flex items-center gap-x-5">
             <img src="loope.png" alt="Loope logo" />
@@ -113,9 +114,6 @@ function HomePage() {
               <FeaturedSellers imageSrc="robot.jpeg" imageAlt="robot" />
             </div>
           </div>
-          {/* <div className="slideshow-container flex justify-end !w-full">
-          <img src="one.jpg" alt="" className="active rounded-xl" />
-        </div> */}
           <div className="!w-full relative overflow-hidden rounded-lg">
             {images.map((image, index) => (
               <img
@@ -130,6 +128,9 @@ function HomePage() {
               />
             ))}
           </div>
+        </div>
+        <div className="mt-5">
+          <LatestListings />
         </div>
       </div>
     </>

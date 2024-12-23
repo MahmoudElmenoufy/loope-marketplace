@@ -17,8 +17,9 @@ function SignInPage(){
   };
 
   return (
-    <div className="bg-[#FDF8F5] sm:w-1/2 sm:h-5/6 p-4 box-border rounded-lg grid overflow-auto">
-      <div className="px-4 ">
+    <div className="bg-[#18403C] flex justify-center items-center h-screen">
+    <div className="bg-[#FDF8F5] w-1/2 h-6/8 p-4 box-border rounded-lg grid overflow-auto">
+      <div className="px-4">
         <h2 className="mx-auto w-max mb-6 font-medium text-2xl text-[#18403C]">
           SIGN IN
         </h2>
@@ -58,6 +59,7 @@ function SignInPage(){
           className="w-48 h-24 p-4 rounded-lg"
         />
       </div>
+    </div>
     </div>
   );
 }

@@ -76,108 +76,110 @@ function SignUp() {
   };
 
   return (
-    <div className="bg-[#FDF8F5] m-auto sm:w-10/12 sm:h-5/6 p-4 box-border rounded-lg overflow-auto">
-      <div className="px-4">
-        <h2 className="mx-auto w-max mb-4 font-medium text-2xl text-[#18403C]">
-          REGISTER
-        </h2>
-        <Box
-          component="form"
-          sx={{ "& > :not(style)": { m: 1, width: "25ch" } }}
-          noValidate
-          autoComplete="off"
-          className="grid grid-cols-2"
-        >
-          <InputField
-            name="First Name"
-            value={firstName}
-            handleChange={handleChangeFirstName}
-          />
-          <InputField
-            name="Last Name"
-            value={lastName}
-            handleChange={handleChangeLastName}
-          />
-          <InputField
-            name="User Name"
-            value={userName}
-            handleChange={handleChangeUserName}
-          />
-          <LocalizationProvider dateAdapter={AdapterDayjs}>
-            <DemoContainer components={["DatePicker"]}>
-              <div className="!w-full flex !mb-3">
-                <label className="!w-1/4 flex items-center text-lg text-[#18403C]">
-                  Birthdate
-                </label>
-                <DatePicker
-                  label="Birthdate"
-                  value={birthdate}
-                  className="bg-white focus:!border-black !w-4/6"
-                  onChange={handleChangeBirthDate}
-                />
-              </div>
-            </DemoContainer>
-          </LocalizationProvider>
-          <div className="!w-full flex !mb-3">
-            <label className="!w-1/4 flex items-center text-lg text-[#18403C]">
-              Gender
-            </label>
-            <div className="!w-4/6 bg-white">
-              <FormControl fullWidth>
-                <InputLabel id="demo-simple-select-label">Gender</InputLabel>
-                <Select
-                  labelId="demo-simple-select-label"
-                  id="demo-simple-select"
-                  value={gender}
-                  label="Gender"
-                  onChange={handleChangeGender}
-                >
-                  <MenuItem value={"male"}>male</MenuItem>
-                  <MenuItem value={"female"}>female</MenuItem>
-                </Select>
-              </FormControl>
-            </div>
-          </div>
-          <div className="!w-full flex !mb-3">
-            <label className="!w-1/4 flex items-center text-lg text-[#18403C]">
-              Phone Number
-            </label>
-            <MuiTelInput
-              value={phoneNumber}
-              onChange={handleChangePhoneNUmber}
-              className="!w-4/6 bg-white"
+    <div className="bg-[#18403C] flex justify-center items-center h-screen">
+      <div className="bg-[#FDF8F5] m-auto sm:w-10/12 sm:h-5/6 p-4 box-border rounded-lg overflow-auto">
+        <div className="px-4">
+          <h2 className="mx-auto w-max mb-4 font-medium text-2xl text-[#18403C]">
+            REGISTER
+          </h2>
+          <Box
+            component="form"
+            sx={{ "& > :not(style)": { m: 1, width: "25ch" } }}
+            noValidate
+            autoComplete="off"
+            className="grid grid-cols-2"
+          >
+            <InputField
+              name="First Name"
+              value={firstName}
+              handleChange={handleChangeFirstName}
             />
-          </div>
-          <InputField
-            name="New Password"
-            type="password"
-            value={newPassword}
-            handleChange={handleChangeNewPassword}
+            <InputField
+              name="Last Name"
+              value={lastName}
+              handleChange={handleChangeLastName}
+            />
+            <InputField
+              name="User Name"
+              value={userName}
+              handleChange={handleChangeUserName}
+            />
+            <LocalizationProvider dateAdapter={AdapterDayjs}>
+              <DemoContainer components={["DatePicker"]}>
+                <div className="!w-full flex !mb-3">
+                  <label className="!w-1/4 flex items-center text-lg text-[#18403C]">
+                    Birthdate
+                  </label>
+                  <DatePicker
+                    label="Birthdate"
+                    value={birthdate}
+                    className="bg-white focus:!border-black !w-4/6"
+                    onChange={handleChangeBirthDate}
+                  />
+                </div>
+              </DemoContainer>
+            </LocalizationProvider>
+            <InputField
+              name="Email"
+              type="Email"
+              value={email}
+              handleChange={handleChangeEmail}
+              placeholder="example@site.com"
+            />
+            <div className="!w-full flex">
+              <label className="!w-1/4 flex items-center text-lg text-[#18403C]">
+                Phone Number
+              </label>
+              <MuiTelInput
+                value={phoneNumber}
+                onChange={handleChangePhoneNUmber}
+                className="!w-4/6 bg-white"
+              />
+            </div>
+            <InputField
+              name="New Password"
+              type="password"
+              value={newPassword}
+              handleChange={handleChangeNewPassword}
+            />
+            <InputField
+              name="Repeat Password"
+              type="password"
+              value={repeatPassword}
+              handleChange={handleChangeRepeatPassword}
+            />
+            <div className="!w-full flex">
+              <label className="!w-1/4 flex items-center text-lg text-[#18403C]">
+                Gender
+              </label>
+              <div className="!w-4/6 bg-white">
+                <FormControl fullWidth>
+                  <InputLabel id="demo-simple-select-label">Gender</InputLabel>
+                  <Select
+                    labelId="demo-simple-select-label"
+                    id="demo-simple-select"
+                    value={gender}
+                    label="Gender"
+                    onChange={handleChangeGender}
+                  >
+                    <MenuItem value={"male"}>male</MenuItem>
+                    <MenuItem value={"female"}>female</MenuItem>
+                  </Select>
+                </FormControl>
+              </div>
+            </div>
+            <button className="text-white w-full me-auto hover:bg-[#173331] justify-self-end row-start-6 col-start-2 font-medium rounded-3xl text-sm px-5 py-5 text-center me-2 focus:ring-4 mb-2 bg-[#18403C]">
+              SUBMIT
+            </button>
+          </Box>
+        </div>
+        <div className="flex justify-center items-center">
+          <img
+            src="/public/loope_head.png"
+            alt="loope marketplace logo"
+            className="w-48 h-24 p-4 rounded-lg"
           />
-          <InputField
-            name="Repeat Password"
-            type="password"
-            value={repeatPassword}
-            handleChange={handleChangeRepeatPassword}
-          />
-          <InputField
-            name="Email"
-            type="Email"
-            value={email}
-            handleChange={handleChangeEmail}
-            placeholder="example@site.com"
-          />
-          <button className="text-white w-full me-auto hover:bg-[#173331] justify-self-end row-start-6 col-start-2 font-medium rounded-3xl text-sm px-5 py-5 text-center me-2 focus:ring-4 mb-2 bg-[#18403C]">
-            SUBMIT
-          </button>
-        </Box>
-      </div>
-      <div className="flex justify-center items-center">
-        <img
-          src="/public/loope_head.png"
-          alt="loope marketplace logo"
-          className="w-48 h-24 p-4 rounded-lg"
-        />
+        </div>
       </div>
     </div>
   );

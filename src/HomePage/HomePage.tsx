@@ -7,6 +7,7 @@ import AccountCircleIcon from "@mui/icons-material/AccountCircle";
 import FilterAltIcon from "@mui/icons-material/FilterAlt";
 import IconButton from "@mui/material/IconButton";
 import Stack from "@mui/material/Stack";
+import FeaturedSellers from "./FeaturedSellers/FeaturedSellers";
 
 function HomePage() {
   return (
@@ -25,11 +26,31 @@ function HomePage() {
         </div>
         <NotificationsIcon />
       </div>
+
+      <div className="grid grid-cols-2 grid-rows-1 !max-h-[25vh">
+        <div>
+          <h1 className="text-3xl font-medium mb-5">Featured Sellers</h1>
+          <div className="flex gap-x-5 overflow-x-auto">
+            <FeaturedSellers imageSrc="robot.jpeg" imageAlt="robot" />
+            <FeaturedSellers imageSrc="robot.jpeg" imageAlt="robot" />
+            <FeaturedSellers imageSrc="robot.jpeg" imageAlt="robot" />
+            <FeaturedSellers imageSrc="robot.jpeg" imageAlt="robot" />
+            <FeaturedSellers imageSrc="robot.jpeg" imageAlt="robot" />
+            <FeaturedSellers imageSrc="robot.jpeg" imageAlt="robot" />
+            <FeaturedSellers imageSrc="robot.jpeg" imageAlt="robot" />
+            <FeaturedSellers imageSrc="robot.jpeg" imageAlt="robot" />
+          </div>
+        </div>
+        <div className="flex justify-end !w-fit">
+          <img src="one.jpg" alt="" className="!w-[400px] !h-full rounded-xl" />
+        </div>
+      </div>
+
       <div className="flex justify-center ">
         <Stack
           direction="row"
           spacing={1}
-          className="fixed bottom-10 m-auto p-3 bg-red-500  rounded-full flex justify-center gap-x-20"
+          className="fixed bottom-10 m-auto p-3 bg-[#18403C]  rounded-full flex justify-center gap-x-20"
         >
           <IconButton aria-label="delete">
             <HomeIcon fontSize="large" className="text-white cursor-pointer" />

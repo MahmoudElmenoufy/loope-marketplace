@@ -1,4 +1,4 @@
-:root {
+.container {
   background-color: #18403c;
 }
 header {
@@ -19,7 +19,7 @@ header p {
 section {
   display: flex;
   flex-direction: column;
-  margin-left: 45%;
+  margin-left: 2%;
   gap: 10px;
   position: absolute;
   bottom: 5vh;

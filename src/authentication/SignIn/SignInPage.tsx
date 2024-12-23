@@ -3,6 +3,7 @@ import Box from "@mui/material/Box";
 import InputField from "../InputField";
 
 import "./SignInPage.css";
+import { Link } from "react-router-dom";
 function SignInPage(){
   const [email, setEmail] =useState("");
   const [Password, setPassword] =useState("");
@@ -43,16 +44,11 @@ function SignInPage(){
             value={Password}
             handleChange={handlePassword}
           />
-          <button className="text-[#0E150E] justify-self-end pe-12">FORGOT PASSWORD?</button>
-          <button className="text-white w-full hover:bg-[#173331] justify-self-end font-medium rounded-3xl text-sm px-5 py-4 text-center focus:ring-4 mb-2 bg-[#18403C]">SIGN IN</button>
+          <Link to="/signin" className="text-[#0E150E] justify-self-end pe-12">FORGOT PASSWORD?</Link>
+          <Link to="/signin" className="text-white w-full hover:bg-[#173331] justify-self-end font-medium rounded-3xl text-sm px-5 py-4 text-center focus:ring-4 mb-2 bg-[#18403C]">SIGN IN</Link>
         </Box>
       </div>
       <div className="flex justify-center items-center">
-        {/* <img
-          src="loope-marketplace.png"
-          alt="loope marketplace logo"
-          className="bg-[#18403C] p-4 rounded-lg"
-        /> */}
         <img
           src="/public/loope_head.png"
           alt="loope marketplace logo"

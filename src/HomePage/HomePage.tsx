@@ -5,43 +5,77 @@ import AddCircleIcon from "@mui/icons-material/AddCircle";
 import LocalMallIcon from "@mui/icons-material/LocalMall";
 import AccountCircleIcon from "@mui/icons-material/AccountCircle";
 import FilterAltIcon from "@mui/icons-material/FilterAlt";
-
+import FeaturedSellers from "./FeaturedSellers/FeaturedSellers";
 function HomePage() {
   return (
     <>
-      <div className="px-6 py-2 bg-[#FDF8F5] flex justify-between items-center">
+    <div className="sticky justify-center">
+      <div className="w-sceen px-6 py-2 bg-[#FDF8F5] flex justify-between items-center">
         <div className="flex items-center gap-x-5">
           <img src="/public/loope_head.png" alt="Loope logo" />
         </div>
-        <div>
+        <div className=" m-auto p-3 bg-[#18403C] rounded-full flex justify-center gap-20 w-1/2">
+        <HomeIcon fontSize="large" className="text-white cursor-pointer" />
+          <CategoryIcon
+            titleAccess="Category"
+            fontSize="large"
+            className="text-white cursor-pointer"
+            role="button"
+          />
+          <AddCircleIcon
+            titleAccess="Add Item"
+            fontSize="large"
+            className="text-white cursor-pointer"
+            role="button"
+          />
+          <LocalMallIcon
+          titleAccess="Shop"
+            fontSize="large"
+            className="text-white cursor-pointer"
+            role="button"
+          />
+          <AccountCircleIcon
+            titleAccess="Profile"
+            fontSize="large"
+            className="text-white cursor-pointer"
+            role="button"
+          />
+        </div>
+        <div className="mr-20">
           <input
             type="search"
             placeholder="Search"
-            className="px-4 py-2 mr-8 rounded-lg"
+            className="px-4 py-2 mr-6 rounded-full"
           />
-          <FilterAltIcon />
+          <FilterAltIcon
+            titleAccess="Filter"
+            fontSize="medium" 
+            htmlColor="#18403C"
+            role="button"/>
         </div>
-        <NotificationsIcon />
+        <NotificationsIcon
+          titleAccess="Notifications"
+          fontSize="medium" 
+          htmlColor="#18403C"
+          role="button"/>
       </div>
-      <div className="flex justify-center">
-        <div className="fixed bottom-10 m-auto p-3 bg-[#18403C] rounded-full flex justify-center gap-x-20">
-          <HomeIcon fontSize="large" className="text-white cursor-pointer" />
-          <CategoryIcon
-            fontSize="large"
-            className="text-white cursor-pointer"
-          />
-          <AddCircleIcon
-            fontSize="large"
-            className="text-white cursor-pointer"
-          />
-          <LocalMallIcon
-            fontSize="large"
-            className="text-white cursor-pointer"
-          />
-          <AccountCircleIcon
-            fontSize="large"
-            className="text-white cursor-pointer"
-          />
+      </div>
+      <div className="grid grid-cols-2 grid-rows-1 !max-h-[25vh">
+        <div>
+          <h1 className="text-3xl font-medium mb-5">Featured Sellers</h1>
+          <div className="flex gap-x-5 overflow-x-auto">
+            <FeaturedSellers imageSrc="robot.jpeg" imageAlt="robot" />
+            <FeaturedSellers imageSrc="robot.jpeg" imageAlt="robot" />
+            <FeaturedSellers imageSrc="robot.jpeg" imageAlt="robot" />
+            <FeaturedSellers imageSrc="robot.jpeg" imageAlt="robot" />
+            <FeaturedSellers imageSrc="robot.jpeg" imageAlt="robot" />
+            <FeaturedSellers imageSrc="robot.jpeg" imageAlt="robot" />
+            <FeaturedSellers imageSrc="robot.jpeg" imageAlt="robot" />
+            <FeaturedSellers imageSrc="robot.jpeg" imageAlt="robot" />
+          </div>
+        </div>
+        <div className="flex justify-end !w-fit">
+          <img src="one.jpg" alt="" className="!w-[400px] !h-full rounded-xl" />
         </div>
       </div>
     </>

@@ -12,6 +12,7 @@ import Select, { SelectChangeEvent } from "@mui/material/Select";
 import InputField from "../InputField";
 import { Dayjs } from "dayjs";
 import "./SignUp.css";
+import { Link } from "react-router-dom";
 
 function SignUp() {
   const [firstName, setFirstName] = React.useState("");
@@ -163,7 +164,7 @@ function SignUp() {
               </FormControl>
             </div>
           </div>
-          <button className="text-white w-full me-auto hover:bg-[#173331] justify-self-end row-start-6 col-start-2 font-medium rounded-3xl text-sm px-5 py-5 text-center me-2 focus:ring-4 mb-2 bg-[#18403C]">SUBMIT</button>
+          <Link to="/signup" className="text-white w-full me-auto hover:bg-[#173331] justify-self-end row-start-6 col-start-2 font-medium rounded-3xl text-sm px-5 py-5 text-center me-2 focus:ring-4 mb-2 bg-[#18403C]">SUBMIT</Link>
         </Box>
       </div>
       <div className="flex justify-center items-center">

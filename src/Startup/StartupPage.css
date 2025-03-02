@@ -1,26 +1,26 @@
-.container{
-    background-color: #18403C;   
+.container {
+  background-color: #18403c;
 }
-header{
-    position: absolute;
-    display: flex;
-    width: 20%;
-    top: 30%;
-    left: 41.5%;
-    color: #FFFFFF;
-    flex-direction: column;
-}
-
-header p{
-    margin-top: 50px;
-    letter-spacing: 3.9px;
+header {
+  position: absolute;
+  display: flex;
+  width: 20%;
+  top: 30%;
+  left: 41.5%;
+  color: #ffffff;
+  flex-direction: column;
 }
 
-section{
-    display: flex;
-    flex-direction: column;
-    margin-left: 2%;
-    gap: 10px;
-    position: absolute;
-    bottom: 5vh;
+header p {
+  margin-top: 50px;
+  letter-spacing: 3.9px;
+}
+
+section {
+  display: flex;
+  flex-direction: column;
+  margin-left: 2%;
+  gap: 10px;
+  position: absolute;
+  bottom: 5vh;
 }

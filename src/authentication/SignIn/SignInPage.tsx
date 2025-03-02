@@ -4,6 +4,7 @@ import InputField from "../InputField";
 
 import "./SignInPage.css";
 import { Link } from "react-router-dom";
+import InputPassword from "../InputPassword";
 function SignInPage(){
   const [email, setEmail] =useState("");
   const [Password, setPassword] =useState("");
@@ -38,12 +39,12 @@ function SignInPage(){
             value={email}
             handleChange={handleChangeEmail}
           />
-          <InputField
-            name="Password"
-            type="password"
-            value={Password}
-            handleChange={handlePassword}
-          />
+          <div className="!w-full flex !mb-3">
+            <label className="!w-1/4 flex items-center text-lg text-[#18403C]">
+              New Password
+            </label>
+            <InputPassword label="New Password" />
+          </div>
           <Link to="/signin" className="text-[#0E150E] justify-self-end pe-12">FORGOT PASSWORD?</Link>
           <Link to="/signin" className="text-white w-full hover:bg-[#173331] justify-self-end font-medium rounded-3xl text-sm px-5 py-4 text-center focus:ring-4 mb-2 bg-[#18403C]">SIGN IN</Link>
         </Box>

@@ -1,4 +1,6 @@
 import TextField from "@mui/material/TextField";
+import Box from "@mui/material/Box";
+
 export default function InputField({
   name,
   placeholder,
@@ -17,16 +19,23 @@ export default function InputField({
       <label className="!w-1/4 flex items-center text-lg text-[#18403C]">
         {name}
       </label>
-      <TextField
-        id={name}
-        label={name}
-        value={value}
-        onChange={handleChange}
-        placeholder={placeholder}
-        variant="outlined"
-        className="!w-4/6 bg-white"
-        type={type}
-      />
+      <Box
+        component="form"
+        sx={{ "& > :not(style)": { m: 1, width: "25ch" } }}
+        noValidate
+        autoComplete="off"
+        className="!w-4/6"
+      >
+        <TextField
+          id={name}
+          label={name}
+          value={value}
+          onChange={handleChange}
+          variant="outlined"
+          className="!w-full bg-white"
+          type={type}
+        />
+      </Box>
     </div>
   );
 }

@@ -13,6 +13,8 @@ import InputField from "../InputField";
 import { Dayjs } from "dayjs";
 import "./SignUp.css";
 import { Link } from "react-router-dom";
+import InputPassword from "../InputPassword";
+import { Checkbox, FormControlLabel, FormGroup } from "@mui/material";
 
 function SignUp() {
   const [firstName, setFirstName] = React.useState("");
@@ -73,7 +75,7 @@ function SignUp() {
 
   return (
     <div className="bg-[#18403C] flex justify-center items-center h-screen">
-    <div className="bg-[#FDF8F5] m-auto sm:w-10/12 sm:h-5/6 p-4 box-border rounded-lg overflow-auto">
+    <div className="bg-[#FDF8F5] m-auto sm:w-10/12 sm:h-5/6 p-4 box-border rounded-lg overflow-hidden">
       <div className="px-4">
         <h2 className="mx-auto w-max mb-4 font-medium text-2xl text-[#18403C]">
           REGISTER
@@ -132,18 +134,27 @@ function SignUp() {
               className="!w-4/6 bg-white"
             />
           </div>
-          <InputField
-            name="New Password"
-            type="password"
-            value={newPassword}
-            handleChange={handleChangeNewPassword}
-          />
-          <InputField
-            name="Repeat Password"
-            type="password"
-            value={repeatPassword}
-            handleChange={handleChangeRepeatPassword}
-          />
+          <div className="!w-full flex !mb-3">
+            <label className="!w-1/4 flex items-center text-lg text-[#18403C]">
+              New Password
+            </label>
+            <InputPassword label="New Password" />
+          </div>
+          <div className="!w-full flex !mb-3">
+            <label className="!w-1/4 flex items-center text-lg text-[#18403C]">
+              confirm Password
+            </label>
+            <InputPassword label="confirm Password" />
+          </div>
+          <div className="!w-full flex !mb-3">
+          <FormGroup className="p-2">
+            <FormControlLabel
+              required
+              control={<Checkbox />}
+              label="I understand and agree to all terms of use and privacy policy." 
+            />
+          </FormGroup>
+          </div>
           <div className="!w-full flex">
             <label className="!w-1/4 flex items-center text-lg text-[#18403C]">
               Gender

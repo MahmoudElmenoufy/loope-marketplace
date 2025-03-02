@@ -1,7 +1,6 @@
 body {
-    background-color: #fdf8f5;
-}
-
+    background-color: #f8f1ed;
+  }
   .nav-item a {
     color: #000;
     text-decoration: none;
@@ -16,4 +15,12 @@ body {
     border-radius: 4px;
     margin: 10px 0;
   }
-  
+  .featuured-sellers .stories img{
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+  }
+  .inside-container{
+    margin: auto;
+    padding: 2rem;
+  }
